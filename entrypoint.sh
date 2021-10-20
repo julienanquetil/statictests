@@ -1,0 +1,9 @@
+#!/bin/sh -l
+
+# Copy the matcher to a shared volume with the host; otherwise "add-matcher"
+# can't find it.
+cp /problem-matcher.json ${HOME}/
+echo "::add-matcher::${HOME}/problem-matcher.json"
+
+cd $GITHUB_WORKSPACE
+sh -c "/root/.composer/vendor/bin/phpcs --report=checkstyle --standard=Magento2 $GITHUB_WORKSPACE/app/code -s $*"
