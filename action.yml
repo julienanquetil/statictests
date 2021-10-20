@@ -1,6 +1,11 @@
 name: 'Magento 2 Coding Style'
 author: 'Extdn'
 description: 'performs php static code analysis with the Magento 2 Coding Standard'
+inputs:
+  path_to_scan:  # id of input
+    description: 'path to analyse'
+    required: true
+    default: 'app/code'
 runs:
   using: 'docker'
   image: 'Dockerfile'
