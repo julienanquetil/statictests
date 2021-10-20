@@ -1,5 +1,4 @@
-name: 'Magento 2 Coding Style'
-author: 'Extdn'
+name: 'Magento 2 PHPCS'
 description: 'performs php static code analysis with the Magento 2 Coding Standard'
 inputs:
   path_to_scan:  # id of input
